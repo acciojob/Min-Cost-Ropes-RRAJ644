@@ -1,18 +1,21 @@
-function mincost(arr){ 
-	const n = arr.length 
-	let totalCost = 0
-	while (n>1) {
-		arr.sort((a,b)=>a-b)
-		const first = arr.shift()
-		const second = arr.shift()
-		const cost = first+second
-		totalCost+=const
-		arr.push(cost)
-		
-	}
+function minCost(arr) {
+    let totalCost = 0;
 
-	return totalCost
-  
+    // Continue until there is only one rope
+    while (arr.length > 1) {
+        arr.sort((a, b) => a - b);
+
+        // Pick the two smallest ropes
+        const first = arr.shift(); // Remove the smallest
+        const second = arr.shift(); // Remove the second smallest
+
+        const cost = first + second;
+        totalCost += cost;
+
+        arr.push(cost);
+    }
+
+    return totalCost;
 }
 
 module.exports=mincost;
