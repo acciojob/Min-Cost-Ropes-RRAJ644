@@ -1,8 +1,4 @@
-function mincost(arr)
-{ 
-//write your code here
-// return the min cost
-
+function mincost(arr){ 
 	const n = arr.length 
 	let totalCost = 0
 	while (n>1) {
